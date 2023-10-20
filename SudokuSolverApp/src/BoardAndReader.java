@@ -11,7 +11,7 @@ public class BoardAndReader {
 		this.boardsize = boardsize;
 		this.board = new int[boardsize][boardsize];			
 		}
-	public void BoarderLoader(String filepath) {//it rhymes 
+	public void BoarderLoader(String filepath) {//it rhymes
 		try (BufferedReader BfR = new BufferedReader(new FileReader(filepath))){
 			for (int row=0; row<boardsize; row++) {
 				String[]rowvalues = BfR.readLine().split("");
