@@ -14,6 +14,8 @@ public class MainExecutor {
 		if(isSolved) {
 			System.out.println("Board is solved.");
 			Printer.PrintBoard(sudokuboard);
+			
+			Printer.ExportFile(sudokuboard, "C:\\Users\\Dunja Computers\\Desktop\\Solved Sudoku.txt");
 		}
 		else {
 			System.out.println("Board is impossible");
