@@ -14,7 +14,7 @@ public class BoardAndReader {
 	public void BoarderLoader(String filepath) {//it rhymes
 		try (BufferedReader BfR = new BufferedReader(new FileReader(filepath))){
 			for (int row=0; row<boardsize; row++) {
-				String[]rowvalues = BfR.readLine().split("");
+				String[]rowvalues = BfR.readLine().split(" ");
 				for(int coloumn =0; coloumn<boardsize; coloumn++) {
 					board[row][coloumn]=Integer.parseInt(rowvalues[coloumn]);
 				}
@@ -24,4 +24,12 @@ public class BoardAndReader {
 			exc.printStackTrace();
 		}
 	}
+ 
+	public int getSize() {
+		return boardsize;
+	}
+	public int [][]getBoard(){
+		return board;
+	}
 }
+	
