@@ -8,9 +8,9 @@ public class BoardAndReader {
 	private int boardsize;
 	
 	public BoardAndReader(int boardsize) {
-		this.boardsize = boardsize;
-		this.board = new int[boardsize][boardsize];			
-		}
+			this.boardsize = boardsize;
+			this.board = new int[boardsize][boardsize];	
+	}
 	public void BoarderLoader(String filepath) {//it rhymes
 		try (BufferedReader BfR = new BufferedReader(new FileReader(filepath))){
 			for (int row=0; row<boardsize; row++) {
@@ -22,15 +22,17 @@ public class BoardAndReader {
 					board[row][coloumn]=Integer.parseInt(rowvalues[coloumn]);
 				}
 			}
-	        // debug print
+	        /*debug print
+	       
 		
 	        for (int r = 0; r < boardsize; r++) {
 	            for (int c = 0; c < boardsize; c++) {
 	                System.out.print(board[r][c] + " ");
 	            }
 	            System.out.println();
-	        }
-		} catch (IOException exc) {
+	        }*/
+		} 
+		catch (IOException exc) {
 			exc.printStackTrace();
 		}
 	}
