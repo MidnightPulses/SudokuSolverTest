@@ -10,9 +10,9 @@ Before running the program, make sure you have a valid input file (.txt file, on
 
 ## Running the program
 
-1. Download the Release version
+1. Download the Release version on the right.
 
-2. Run the start.bat file
+2. Run the start.bat file.
 
 3. Once the command prompt opens, enter the dezired board size (e.g., a 9 for a 9x9 puzzle), followed by the path of the input file (e.g., C:\Users\Username\Desktop\Board.txt)
 
