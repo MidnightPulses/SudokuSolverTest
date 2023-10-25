@@ -5,9 +5,10 @@ public class MainExecutor {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+Scanner scanner = new Scanner(System.in);
 		
-		int boardsize = BoardsizePrompt();
-		String inputfilepath = InputfilePrompt();
+		int boardsize = BoardsizePrompt(scanner);
+		String inputfilepath = InputfilePrompt(scanner);
 		if(!BoardsizeMatch(boardsize, inputfilepath)) {
 			System.out.println("Error: board sizes don't match");
 			return;
@@ -30,20 +31,18 @@ public class MainExecutor {
 		else {
 			System.out.println("Board is impossible");
 		}
-
+scanner.close();
 	}
 	
-	private static int BoardsizePrompt() {
-		Scanner scanner = new Scanner(System.in);
+	private static int BoardsizePrompt(Scanner scanner) {
 		System.out.print("Enter board size:");
 		int boardsize = scanner.nextInt();
 		return boardsize;
 	}
 	
-	private static String InputfilePrompt() {
-		Scanner scanner = new Scanner(System.in);
+	private static String InputfilePrompt(Scanner scanner) {
 		System.out.print("Enter input file path");
-		String inputfilepath = scanner.nextLine();
+		String inputfilepath = scanner.next();
 		return inputfilepath;
 	}
 	
@@ -58,6 +57,10 @@ public class MainExecutor {
 			}
 		}
 	private static String OutputfilePath(String inputfilepath) {
+		if (inputfilepath.isEmpty()) {
+			System.out.println("Error: invalid path");
+			return null;
+		}
 		File inputfile = new File(inputfilepath);
 		String parentpath = inputfile.getParent();
 		String inputfilename = inputfile.getName();

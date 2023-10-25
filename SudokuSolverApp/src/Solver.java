@@ -5,7 +5,7 @@ public class Solver {
 	
 	public Solver(BoardAndReader sudokuboard) {
 		this.sudokuboard = sudokuboard;
-		
+	
 	}
 	
 	public boolean SudokuSolver() {

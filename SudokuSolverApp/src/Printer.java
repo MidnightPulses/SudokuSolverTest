@@ -27,7 +27,7 @@ public class Printer {
 	                writer.newLine();
 	            }
 
-	            System.out.println("Board saved to" + outputpath);
+	            System.out.println("Board saved to: " + outputpath);
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
