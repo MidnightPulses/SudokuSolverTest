@@ -25,7 +25,7 @@ Scanner scanner = new Scanner(System.in);
 			Printer.PrintBoard(sudokuboard);
 			
 			String outputfilepath = OutputfilePath(inputfilepath);
-			System.out.println("Putput file path: " + outputfilepath);
+			
 			Printer.ExportFile(sudokuboard, outputfilepath);
 		}
 		else {
@@ -35,13 +35,13 @@ scanner.close();
 	}
 	
 	private static int BoardsizePrompt(Scanner scanner) {
-		System.out.print("Enter board size:");
+		System.out.print("Enter board size: ");
 		int boardsize = scanner.nextInt();
 		return boardsize;
 	}
 	
 	private static String InputfilePrompt(Scanner scanner) {
-		System.out.print("Enter input file path");
+		System.out.print("Enter FULL input file path (with the full filename) ");
 		String inputfilepath = scanner.next();
 		return inputfilepath;
 	}
@@ -69,7 +69,7 @@ scanner.close();
 		String outputfilename = basename + "_solved" + extention;
 		
 		String outputfilepath = new File(parentpath, outputfilename).getPath();
-	System.out.println("Output file path: " + outputfilepath );
+	
 		return outputfilepath;
 	} 
 	}
