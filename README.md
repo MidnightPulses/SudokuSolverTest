@@ -5,9 +5,6 @@ This is a Java program for solving Sudoku puzzles. It provides a command-line in
 ## Prerequisites
 
 Before running the program, make sure you have a valid input file (.txt file, one line per row, with spaces separating the numbers, and 0 representing empty spaces), as well as Java Runtime Environment (JRE) installed.
-
-*Note* the program works for Windows only.
-
 ## Running the program
 
 1. Download the Release version on the right.
